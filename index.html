@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Semesta Tak Bertepi</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <link href="style.css" rel="stylesheet" />
+</head>
+<body class="bg-black text-white font-sans">
+
+  <!-- HEADER -->
+  <header class="bg-hero-image text-center py-20 bg-fixed bg-center bg-cover fade-in">
+    <h1 class="text-5xl font-bold glow-text gradient-text"></h1>
+    <p class="mt-4 text-xl">Jelajahi misteri kosmos dengan sains dan keindahan</p>
+    <a href="#galeri" class="mt-6 inline-block bg-blue-600 px-6 py-2 rounded hover:bg-blue-700 transition">Eksplorasi Sekarang</a>
+  </header>
+
+  <!-- PLANET -->
+  <section class="p-10 bg-black fade-in">
+    <h2 class="text-3xl font-bold mb-4">🪐 Planet</h2>
+    <p class="text-lg leading-relaxed">Planet adalah benda langit yang mengorbit bintang. Tata surya kita memiliki 8 planet, dibagi menjadi planet terestrial dan planet raksasa gas. Orbit dan rotasi mereka menciptakan berbagai musim dan fenomena alam unik.</p>
+    
+    <!-- Orbit Simulation -->
+    <div class="orbit-wrapper my-10">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2e/Mercury_in_true_color.jpg/320px-Mercury_in_true_color.jpg" alt="Merkurius" />
+    </div>
+  </section>
+
+  <!-- NEBULA -->
+  <section class="p-10 bg-gray-900 fade-in">
+    <h2 class="text-3xl font-bold mb-4">☁️ Nebula</h2>
+    <p class="text-lg">Nebula adalah awan raksasa dari gas dan debu di luar angkasa. Beberapa adalah tempat kelahiran bintang (seperti Eagle Nebula), sementara yang lain terbentuk dari sisa supernova. Mereka memancarkan warna-warni spektakuler.</p>
+  </section>
+
+  <!-- BLACK HOLE -->
+  <section class="p-10 bg-black fade-in">
+    <h2 class="text-3xl font-bold mb-4">🕳️ Lubang Hitam</h2>
+    <p class="text-lg">Lubang hitam memiliki gravitasi ekstrem hingga cahaya tidak bisa lolos. Mereka terbentuk dari bintang besar yang runtuh dan ada juga yang supermasif di pusat galaksi, termasuk di Bima Sakti.</p>
+  </section>
+
+  <!-- SUPERNOVA -->
+  <section class="p-10 bg-gray-900 fade-in">
+    <h2 class="text-3xl font-bold mb-4">💥 Supernova</h2>
+    <p class="text-lg">Supernova adalah ledakan bintang yang sangat terang, melepaskan energi besar dan menyebarkan unsur berat. Proses ini berperan penting dalam penciptaan planet dan kehidupan.</p>
+  </section>
+
+  <!-- GALAKSI -->
+  <section class="p-10 bg-black fade-in">
+    <h2 class="text-3xl font-bold mb-4">🌌 Galaksi</h2>
+    <p class="text-lg">Galaksi adalah kumpulan besar bintang, gas, dan debu yang terikat gravitasi. Galaksi Bima Sakti adalah tempat tinggal kita. Dengan teleskop modern, miliaran galaksi lainnya telah terdeteksi di alam semesta.</p>
+  </section>
+
+  <!-- GALERI -->
+  <section id="galeri" class="p-10 bg-black fade-in">
+    <h2 class="text-3xl font-bold mb-6">📸 Galeri Alam Semesta</h2>
+    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
+      <img src="https://www.nasa.gov/sites/default/files/thumbnails/image/potw2317a.jpg" class="rounded shadow-lg" alt="Nebula" />
+      <img src="https://mars.nasa.gov/system/resources/detail_files/25638_PIA25581-FigureA-web.jpg" class="rounded shadow-lg" alt="Mars Panorama" />
+      <img src="https://www.nasa.gov/sites/default/files/thumbnails/image/stsci-01gfd6hxk7vbqg7ek6vcyzccyk.jpg" class="rounded shadow-lg" alt="James Webb Deep Field" />
+    </div>
+  </section>
+
+  <!-- NASA API -->
+  <section class="p-10 bg-gray-900 fade-in">
+    <h2 class="text-3xl font-bold mb-4">📡 Gambar Harian NASA</h2>
+    <div id="nasa-apod" class="mt-6 p-4 border border-gray-600 rounded"></div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="bg-black text-center p-6 border-t border-gray-700 mt-10">
+    <p>&copy; 2025 Semesta Tak Bertepi | Data dari NASA</p>
+  </footer>
+
+  <!-- Musik Ambient -->
+  <audio autoplay loop hidden>
+    <source src="https://cdn.pixabay.com/download/audio/2022/03/15/audio_e206e04ec3.mp3" type="audio/mpeg">
+  </audio>
+
+  <!-- Script -->
+  <script src="script.js"></script>
+</body>
+</html>
