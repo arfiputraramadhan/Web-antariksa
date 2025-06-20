@@ -1,0 +1,110 @@
+.bg-hero-image {
+  background-image: url('https://images-assets.nasa.gov/image/GSFC_20171208_Archive_e000016/GSFC_20171208_Archive_e000016~orig.jpg');
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: center;
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  width: 300%;
+  height: 300%;
+  background: radial-gradient(white 1px, transparent 1px);
+  background-size: 6px 6px;
+  opacity: 0.05;
+  z-index: -1;
+  animation: stars 300s linear infinite;
+}
+
+@keyframes stars {
+  0% {
+    transform: translate(0, 0);
+  }
+  100% {
+    transform: translate(-400px, -800px);
+  }
+}
+
+.shooting-star {
+  position: absolute;
+  width: 2px;
+  height: 100px;
+  background: linear-gradient(white, transparent);
+  opacity: 0.9;
+  transform: rotate(45deg);
+  animation: shoot 2s linear forwards;
+  z-index: 9999;
+}
+
+@keyframes shoot {
+  0% {
+    top: -10%;
+    left: 100%;
+    opacity: 0;
+  }
+  30% {
+    opacity: 1;
+  }
+  100% {
+    top: 100%;
+    left: -10%;
+    opacity: 0;
+  }
+}
+
+.glow-text {
+  text-shadow: 0 0 5px #0ff, 0 0 20px #0ff, 0 0 40px #0ff;
+}
+
+.gradient-text {
+  background: linear-gradient(to right, #00f0ff, #ff00ff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.orbit-wrapper {
+  position: relative;
+  width: 200px;
+  height: 200px;
+  margin: auto;
+  animation: rotateOrbit 20s linear infinite;
+}
+.orbit-wrapper img {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 40px;
+}
+@keyframes rotateOrbit {
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.fade-in {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeInUp 1.5s ease-out forwards;
+}
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-thumb {
+  background-color: #444;
+  border-radius: 6px;
+}
+
+section {
+  border-bottom: 1px solid #222;
+  padding-bottom: 2rem;
+  margin-bottom: 2rem;
+}
